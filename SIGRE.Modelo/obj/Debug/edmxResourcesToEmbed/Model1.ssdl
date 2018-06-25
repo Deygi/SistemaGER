@@ -1,0 +1,316 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SGEBDModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Market">
+    <Key>
+      <PropertyRef Name="idMarket" />
+    </Key>
+    <Property Name="idMarket" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nomMarket" Type="varchar" MaxLength="50" />
+    <Property Name="address" Type="varchar" MaxLength="100" />
+    <Property Name="zone" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="idProducto" />
+    </Key>
+    <Property Name="idProducto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nomProduct" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="idTypeProduct" Type="int" />
+    <Property Name="idTypeUnit" Type="int" />
+  </EntityType>
+  <EntityType Name="Report">
+    <Key>
+      <PropertyRef Name="idreport" />
+    </Key>
+    <Property Name="idreport" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idUser" Type="int" Nullable="false" />
+    <Property Name="dateReport" Type="date" Nullable="false" />
+    <Property Name="idMarket" Type="int" Nullable="false" />
+    <Property Name="idSample" Type="int" Nullable="false" />
+    <Property Name="idUbigeo" Type="int" />
+  </EntityType>
+  <EntityType Name="Sample">
+    <Key>
+      <PropertyRef Name="idSample" />
+    </Key>
+    <Property Name="idSample" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="prices" Type="varchar" MaxLength="300" />
+    <Property Name="dateSample" Type="date" />
+    <Property Name="promedio" Type="decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'SGEBD.dbo.Sample_Product' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="Sample_Product">
+    <Key>
+      <PropertyRef Name="idProducto" />
+      <PropertyRef Name="idSample" />
+    </Key>
+    <Property Name="idProducto" Type="int" Nullable="false" />
+    <Property Name="idSample" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="typeProduct">
+    <Key>
+      <PropertyRef Name="idTypeProduct" />
+    </Key>
+    <Property Name="idTypeProduct" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="description" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="typeUnit">
+    <Key>
+      <PropertyRef Name="idTypeUnit" />
+    </Key>
+    <Property Name="idTypeUnit" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="description" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="equalUnit" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="typeUser">
+    <Key>
+      <PropertyRef Name="idTypeUser" />
+    </Key>
+    <Property Name="idTypeUser" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="description" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Ubigeo">
+    <Key>
+      <PropertyRef Name="idUbigeo" />
+    </Key>
+    <Property Name="idUbigeo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idDep" Type="int" Nullable="false" />
+    <Property Name="idProv" Type="int" Nullable="false" />
+    <Property Name="idDist" Type="int" Nullable="false" />
+    <Property Name="desDep" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="desProv" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="desDist" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'SGEBD.dbo.Ubigeo_Product' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="Ubigeo_Product">
+    <Key>
+      <PropertyRef Name="idProducto" />
+      <PropertyRef Name="idUbigeo" />
+    </Key>
+    <Property Name="idProducto" Type="int" Nullable="false" />
+    <Property Name="idUbigeo" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="idUser" />
+    </Key>
+    <Property Name="idUser" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idTypeUser" Type="int" Nullable="false" />
+    <Property Name="nomUser" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="apeUser" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="nickNameUser" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__Product__idTypeP__1CF15040">
+    <End Role="typeProduct" Type="Self.typeProduct" Multiplicity="0..1" />
+    <End Role="Product" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="typeProduct">
+        <PropertyRef Name="idTypeProduct" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="idTypeProduct" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Product__idTypeU__1DE57479">
+    <End Role="typeUnit" Type="Self.typeUnit" Multiplicity="0..1" />
+    <End Role="Product" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="typeUnit">
+        <PropertyRef Name="idTypeUnit" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="idTypeUnit" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Report__idMarket__2D27B809">
+    <End Role="Market" Type="Self.Market" Multiplicity="1" />
+    <End Role="Report" Type="Self.Report" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Market">
+        <PropertyRef Name="idMarket" />
+      </Principal>
+      <Dependent Role="Report">
+        <PropertyRef Name="idMarket" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Report__idMarket__2F10007B">
+    <End Role="Ubigeo" Type="Self.Ubigeo" Multiplicity="1" />
+    <End Role="Report" Type="Self.Report" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ubigeo">
+        <PropertyRef Name="idUbigeo" />
+      </Principal>
+      <Dependent Role="Report">
+        <PropertyRef Name="idMarket" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Report__idSample__2E1BDC42">
+    <End Role="Sample" Type="Self.Sample" Multiplicity="1" />
+    <End Role="Report" Type="Self.Report" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sample">
+        <PropertyRef Name="idSample" />
+      </Principal>
+      <Dependent Role="Report">
+        <PropertyRef Name="idSample" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Report__idUser__2C3393D0">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Report" Type="Self.Report" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUser" />
+      </Principal>
+      <Dependent Role="Report">
+        <PropertyRef Name="idUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Sample_Pr__idPro__24927208">
+    <End Role="Product" Type="Self.Product" Multiplicity="1" />
+    <End Role="Sample_Product" Type="Self.Sample_Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="idProducto" />
+      </Principal>
+      <Dependent Role="Sample_Product">
+        <PropertyRef Name="idProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Sample_Pr__idSam__25869641">
+    <End Role="Sample" Type="Self.Sample" Multiplicity="1" />
+    <End Role="Sample_Product" Type="Self.Sample_Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sample">
+        <PropertyRef Name="idSample" />
+      </Principal>
+      <Dependent Role="Sample_Product">
+        <PropertyRef Name="idSample" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Ubigeo_Pr__idPro__276EDEB3">
+    <End Role="Product" Type="Self.Product" Multiplicity="1" />
+    <End Role="Ubigeo_Product" Type="Self.Ubigeo_Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="idProducto" />
+      </Principal>
+      <Dependent Role="Ubigeo_Product">
+        <PropertyRef Name="idProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Ubigeo_Pr__idUbi__286302EC">
+    <End Role="Ubigeo" Type="Self.Ubigeo" Multiplicity="1" />
+    <End Role="Ubigeo_Product" Type="Self.Ubigeo_Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ubigeo">
+        <PropertyRef Name="idUbigeo" />
+      </Principal>
+      <Dependent Role="Ubigeo_Product">
+        <PropertyRef Name="idUbigeo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Usuario__idTypeU__1273C1CD">
+    <End Role="typeUser" Type="Self.typeUser" Multiplicity="1" />
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="typeUser">
+        <PropertyRef Name="idTypeUser" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="idTypeUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SGEBDModelStoreContainer">
+    <EntitySet Name="Market" EntityType="Self.Market" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Report" EntityType="Self.Report" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sample" EntityType="Self.Sample" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="typeProduct" EntityType="Self.typeProduct" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="typeUnit" EntityType="Self.typeUnit" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="typeUser" EntityType="Self.typeUser" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ubigeo" EntityType="Self.Ubigeo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sample_Product" EntityType="Self.Sample_Product" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Sample_Product].[idProducto] AS [idProducto], 
+    [Sample_Product].[idSample] AS [idSample]
+    FROM [dbo].[Sample_Product] AS [Sample_Product]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Ubigeo_Product" EntityType="Self.Ubigeo_Product" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Ubigeo_Product].[idProducto] AS [idProducto], 
+    [Ubigeo_Product].[idUbigeo] AS [idUbigeo]
+    FROM [dbo].[Ubigeo_Product] AS [Ubigeo_Product]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__Product__idTypeP__1CF15040" Association="Self.FK__Product__idTypeP__1CF15040">
+      <End Role="typeProduct" EntitySet="typeProduct" />
+      <End Role="Product" EntitySet="Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Product__idTypeU__1DE57479" Association="Self.FK__Product__idTypeU__1DE57479">
+      <End Role="typeUnit" EntitySet="typeUnit" />
+      <End Role="Product" EntitySet="Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Report__idMarket__2D27B809" Association="Self.FK__Report__idMarket__2D27B809">
+      <End Role="Market" EntitySet="Market" />
+      <End Role="Report" EntitySet="Report" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Report__idMarket__2F10007B" Association="Self.FK__Report__idMarket__2F10007B">
+      <End Role="Ubigeo" EntitySet="Ubigeo" />
+      <End Role="Report" EntitySet="Report" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Report__idSample__2E1BDC42" Association="Self.FK__Report__idSample__2E1BDC42">
+      <End Role="Sample" EntitySet="Sample" />
+      <End Role="Report" EntitySet="Report" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Report__idUser__2C3393D0" Association="Self.FK__Report__idUser__2C3393D0">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Report" EntitySet="Report" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Sample_Pr__idPro__24927208" Association="Self.FK__Sample_Pr__idPro__24927208">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="Sample_Product" EntitySet="Sample_Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Sample_Pr__idSam__25869641" Association="Self.FK__Sample_Pr__idSam__25869641">
+      <End Role="Sample" EntitySet="Sample" />
+      <End Role="Sample_Product" EntitySet="Sample_Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Ubigeo_Pr__idPro__276EDEB3" Association="Self.FK__Ubigeo_Pr__idPro__276EDEB3">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="Ubigeo_Product" EntitySet="Ubigeo_Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Ubigeo_Pr__idUbi__286302EC" Association="Self.FK__Ubigeo_Pr__idUbi__286302EC">
+      <End Role="Ubigeo" EntitySet="Ubigeo" />
+      <End Role="Ubigeo_Product" EntitySet="Ubigeo_Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Usuario__idTypeU__1273C1CD" Association="Self.FK__Usuario__idTypeU__1273C1CD">
+      <End Role="typeUser" EntitySet="typeUser" />
+      <End Role="Usuario" EntitySet="Usuario" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

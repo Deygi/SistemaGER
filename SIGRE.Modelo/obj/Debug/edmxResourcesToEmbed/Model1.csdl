@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SGEBDModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Market">
+    <Key>
+      <PropertyRef Name="idMarket" />
+    </Key>
+    <Property Name="idMarket" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nomMarket" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="address" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="zone" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Report" Relationship="Self.FK__Report__idMarket__2D27B809" FromRole="Market" ToRole="Report" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="idProducto" />
+    </Key>
+    <Property Name="idProducto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nomProduct" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="idTypeProduct" Type="Int32" />
+    <Property Name="idTypeUnit" Type="Int32" />
+    <NavigationProperty Name="typeProduct" Relationship="Self.FK__Product__idTypeP__1CF15040" FromRole="Product" ToRole="typeProduct" />
+    <NavigationProperty Name="typeUnit" Relationship="Self.FK__Product__idTypeU__1DE57479" FromRole="Product" ToRole="typeUnit" />
+    <NavigationProperty Name="Sample" Relationship="Self.Sample_Product" FromRole="Product" ToRole="Sample" />
+    <NavigationProperty Name="Ubigeo" Relationship="Self.Ubigeo_Product" FromRole="Product" ToRole="Ubigeo" />
+  </EntityType>
+  <EntityType Name="Report">
+    <Key>
+      <PropertyRef Name="idreport" />
+    </Key>
+    <Property Name="idreport" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idUser" Type="Int32" Nullable="false" />
+    <Property Name="dateReport" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="idMarket" Type="Int32" Nullable="false" />
+    <Property Name="idSample" Type="Int32" Nullable="false" />
+    <Property Name="idUbigeo" Type="Int32" />
+    <NavigationProperty Name="Market" Relationship="Self.FK__Report__idMarket__2D27B809" FromRole="Report" ToRole="Market" />
+    <NavigationProperty Name="Ubigeo" Relationship="Self.FK__Report__idMarket__2F10007B" FromRole="Report" ToRole="Ubigeo" />
+    <NavigationProperty Name="Sample" Relationship="Self.FK__Report__idSample__2E1BDC42" FromRole="Report" ToRole="Sample" />
+    <NavigationProperty Name="Usuario" Relationship="Self.FK__Report__idUser__2C3393D0" FromRole="Report" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="Sample">
+    <Key>
+      <PropertyRef Name="idSample" />
+    </Key>
+    <Property Name="idSample" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="prices" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="dateSample" Type="DateTime" Precision="0" />
+    <Property Name="promedio" Type="Decimal" Precision="18" Scale="0" />
+    <NavigationProperty Name="Report" Relationship="Self.FK__Report__idSample__2E1BDC42" FromRole="Sample" ToRole="Report" />
+    <NavigationProperty Name="Product" Relationship="Self.Sample_Product" FromRole="Sample" ToRole="Product" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="typeProduct">
+    <Key>
+      <PropertyRef Name="idTypeProduct" />
+    </Key>
+    <Property Name="idTypeProduct" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Product" Relationship="Self.FK__Product__idTypeP__1CF15040" FromRole="typeProduct" ToRole="Product" />
+  </EntityType>
+  <EntityType Name="typeUnit">
+    <Key>
+      <PropertyRef Name="idTypeUnit" />
+    </Key>
+    <Property Name="idTypeUnit" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="equalUnit" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Product" Relationship="Self.FK__Product__idTypeU__1DE57479" FromRole="typeUnit" ToRole="Product" />
+  </EntityType>
+  <EntityType Name="typeUser">
+    <Key>
+      <PropertyRef Name="idTypeUser" />
+    </Key>
+    <Property Name="idTypeUser" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Usuario" Relationship="Self.FK__Usuario__idTypeU__1273C1CD" FromRole="typeUser" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="Ubigeo">
+    <Key>
+      <PropertyRef Name="idUbigeo" />
+    </Key>
+    <Property Name="idUbigeo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idDep" Type="Int32" Nullable="false" />
+    <Property Name="idProv" Type="Int32" Nullable="false" />
+    <Property Name="idDist" Type="Int32" Nullable="false" />
+    <Property Name="desDep" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="desProv" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="desDist" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Report" Relationship="Self.FK__Report__idMarket__2F10007B" FromRole="Ubigeo" ToRole="Report" />
+    <NavigationProperty Name="Product" Relationship="Self.Ubigeo_Product" FromRole="Ubigeo" ToRole="Product" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="idUser" />
+    </Key>
+    <Property Name="idUser" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idTypeUser" Type="Int32" Nullable="false" />
+    <Property Name="nomUser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="apeUser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nickNameUser" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Report" Relationship="Self.FK__Report__idUser__2C3393D0" FromRole="Usuario" ToRole="Report" />
+    <NavigationProperty Name="typeUser" Relationship="Self.FK__Usuario__idTypeU__1273C1CD" FromRole="Usuario" ToRole="typeUser" />
+  </EntityType>
+  <Association Name="FK__Report__idMarket__2D27B809">
+    <End Role="Market" Type="Self.Market" Multiplicity="1" />
+    <End Role="Report" Type="Self.Report" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Market">
+        <PropertyRef Name="idMarket" />
+      </Principal>
+      <Dependent Role="Report">
+        <PropertyRef Name="idMarket" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Product__idTypeP__1CF15040">
+    <End Role="typeProduct" Type="Self.typeProduct" Multiplicity="0..1" />
+    <End Role="Product" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="typeProduct">
+        <PropertyRef Name="idTypeProduct" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="idTypeProduct" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Product__idTypeU__1DE57479">
+    <End Role="typeUnit" Type="Self.typeUnit" Multiplicity="0..1" />
+    <End Role="Product" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="typeUnit">
+        <PropertyRef Name="idTypeUnit" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="idTypeUnit" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Report__idMarket__2F10007B">
+    <End Role="Ubigeo" Type="Self.Ubigeo" Multiplicity="1" />
+    <End Role="Report" Type="Self.Report" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ubigeo">
+        <PropertyRef Name="idUbigeo" />
+      </Principal>
+      <Dependent Role="Report">
+        <PropertyRef Name="idMarket" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Report__idSample__2E1BDC42">
+    <End Role="Sample" Type="Self.Sample" Multiplicity="1" />
+    <End Role="Report" Type="Self.Report" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sample">
+        <PropertyRef Name="idSample" />
+      </Principal>
+      <Dependent Role="Report">
+        <PropertyRef Name="idSample" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Report__idUser__2C3393D0">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Report" Type="Self.Report" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUser" />
+      </Principal>
+      <Dependent Role="Report">
+        <PropertyRef Name="idUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Usuario__idTypeU__1273C1CD">
+    <End Role="typeUser" Type="Self.typeUser" Multiplicity="1" />
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="typeUser">
+        <PropertyRef Name="idTypeUser" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="idTypeUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Sample_Product">
+    <End Role="Product" Type="Self.Product" Multiplicity="*" />
+    <End Role="Sample" Type="Self.Sample" Multiplicity="*" />
+  </Association>
+  <Association Name="Ubigeo_Product">
+    <End Role="Product" Type="Self.Product" Multiplicity="*" />
+    <End Role="Ubigeo" Type="Self.Ubigeo" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="SGEBDEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Market" EntityType="Self.Market" />
+    <EntitySet Name="Product" EntityType="Self.Product" />
+    <EntitySet Name="Report" EntityType="Self.Report" />
+    <EntitySet Name="Sample" EntityType="Self.Sample" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="typeProduct" EntityType="Self.typeProduct" />
+    <EntitySet Name="typeUnit" EntityType="Self.typeUnit" />
+    <EntitySet Name="typeUser" EntityType="Self.typeUser" />
+    <EntitySet Name="Ubigeo" EntityType="Self.Ubigeo" />
+    <EntitySet Name="Usuario" EntityType="Self.Usuario" />
+    <AssociationSet Name="FK__Report__idMarket__2D27B809" Association="Self.FK__Report__idMarket__2D27B809">
+      <End Role="Market" EntitySet="Market" />
+      <End Role="Report" EntitySet="Report" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Product__idTypeP__1CF15040" Association="Self.FK__Product__idTypeP__1CF15040">
+      <End Role="typeProduct" EntitySet="typeProduct" />
+      <End Role="Product" EntitySet="Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Product__idTypeU__1DE57479" Association="Self.FK__Product__idTypeU__1DE57479">
+      <End Role="typeUnit" EntitySet="typeUnit" />
+      <End Role="Product" EntitySet="Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Report__idMarket__2F10007B" Association="Self.FK__Report__idMarket__2F10007B">
+      <End Role="Ubigeo" EntitySet="Ubigeo" />
+      <End Role="Report" EntitySet="Report" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Report__idSample__2E1BDC42" Association="Self.FK__Report__idSample__2E1BDC42">
+      <End Role="Sample" EntitySet="Sample" />
+      <End Role="Report" EntitySet="Report" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Report__idUser__2C3393D0" Association="Self.FK__Report__idUser__2C3393D0">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Report" EntitySet="Report" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Usuario__idTypeU__1273C1CD" Association="Self.FK__Usuario__idTypeU__1273C1CD">
+      <End Role="typeUser" EntitySet="typeUser" />
+      <End Role="Usuario" EntitySet="Usuario" />
+    </AssociationSet>
+    <AssociationSet Name="Sample_Product" Association="Self.Sample_Product">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="Sample" EntitySet="Sample" />
+    </AssociationSet>
+    <AssociationSet Name="Ubigeo_Product" Association="Self.Ubigeo_Product">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="Ubigeo" EntitySet="Ubigeo" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,9 @@
+C:\Users\DEY\source\repos\SistemaGRE\SIGRE.Presentacion\bin\Debug\SIGRE.Presentacion.exe.config
+C:\Users\DEY\source\repos\SistemaGRE\SIGRE.Presentacion\bin\Debug\SIGRE.Presentacion.exe
+C:\Users\DEY\source\repos\SistemaGRE\SIGRE.Presentacion\bin\Debug\SIGRE.Presentacion.pdb
+C:\Users\DEY\source\repos\SistemaGRE\SIGRE.Presentacion\obj\Debug\SIGRE.Presentacion.csprojResolveAssemblyReference.cache
+C:\Users\DEY\source\repos\SistemaGRE\SIGRE.Presentacion\obj\Debug\SIGRE.Presentacion.Properties.Resources.resources
+C:\Users\DEY\source\repos\SistemaGRE\SIGRE.Presentacion\obj\Debug\SIGRE.Presentacion.csproj.GenerateResource.cache
+C:\Users\DEY\source\repos\SistemaGRE\SIGRE.Presentacion\obj\Debug\SIGRE.Presentacion.csproj.CoreCompileInputs.cache
+C:\Users\DEY\source\repos\SistemaGRE\SIGRE.Presentacion\obj\Debug\SIGRE.Presentacion.exe
+C:\Users\DEY\source\repos\SistemaGRE\SIGRE.Presentacion\obj\Debug\SIGRE.Presentacion.pdb

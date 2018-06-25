@@ -1,0 +1,5 @@
+C:\Users\DEY\source\repos\SistemaGRE\SIGRE.Entities\bin\Debug\SIGRE.Entities.dll
+C:\Users\DEY\source\repos\SistemaGRE\SIGRE.Entities\bin\Debug\SIGRE.Entities.pdb
+C:\Users\DEY\source\repos\SistemaGRE\SIGRE.Entities\obj\Debug\SIGRE.Entities.csproj.CoreCompileInputs.cache
+C:\Users\DEY\source\repos\SistemaGRE\SIGRE.Entities\obj\Debug\SIGRE.Entities.dll
+C:\Users\DEY\source\repos\SistemaGRE\SIGRE.Entities\obj\Debug\SIGRE.Entities.pdb

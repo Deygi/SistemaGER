@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2037
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SIGRE.Presentacion", "SIGRE.Presentacion\SIGRE.Presentacion.csproj", "{01B800E3-BFE3-4A32-B235-94C179ED19C1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Backend", "Backend", "{FF5F7246-F1D1-49A4-BFD9-DCE80576FB3B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{124B8745-9F86-4A67-9276-A5F55CF07511}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Process", "Process", "{5E2BA3E0-46E3-4239-9D66-78502F9D70BA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cross", "Cross", "{EC32F519-92B3-40A3-8F61-844447E760C3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Fronted", "Fronted", "{44481951-63D8-4D11-86C3-17AD7172B85A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SIGRE.Modelo", "SIGRE.Modelo\SIGRE.Modelo.csproj", "{1183FA94-D225-4470-BC45-F67BAC055B55}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SIGRE.Entities", "SIGRE.Entities\SIGRE.Entities.csproj", "{EA15DD02-2122-4491-8218-CF61778C2A7F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{01B800E3-BFE3-4A32-B235-94C179ED19C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01B800E3-BFE3-4A32-B235-94C179ED19C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01B800E3-BFE3-4A32-B235-94C179ED19C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01B800E3-BFE3-4A32-B235-94C179ED19C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1183FA94-D225-4470-BC45-F67BAC055B55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1183FA94-D225-4470-BC45-F67BAC055B55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1183FA94-D225-4470-BC45-F67BAC055B55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1183FA94-D225-4470-BC45-F67BAC055B55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA15DD02-2122-4491-8218-CF61778C2A7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA15DD02-2122-4491-8218-CF61778C2A7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA15DD02-2122-4491-8218-CF61778C2A7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA15DD02-2122-4491-8218-CF61778C2A7F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{01B800E3-BFE3-4A32-B235-94C179ED19C1} = {44481951-63D8-4D11-86C3-17AD7172B85A}
+		{124B8745-9F86-4A67-9276-A5F55CF07511} = {FF5F7246-F1D1-49A4-BFD9-DCE80576FB3B}
+		{5E2BA3E0-46E3-4239-9D66-78502F9D70BA} = {FF5F7246-F1D1-49A4-BFD9-DCE80576FB3B}
+		{1183FA94-D225-4470-BC45-F67BAC055B55} = {124B8745-9F86-4A67-9276-A5F55CF07511}
+		{EA15DD02-2122-4491-8218-CF61778C2A7F} = {EC32F519-92B3-40A3-8F61-844447E760C3}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {49718849-9AB2-4D29-87AF-6A39A24BDC74}
+	EndGlobalSection
+EndGlobal
