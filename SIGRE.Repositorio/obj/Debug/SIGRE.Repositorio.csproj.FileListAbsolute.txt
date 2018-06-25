@@ -1,0 +1,2 @@
+C:\Users\DEY\source\repos\SistemaGRE\SIGRE.Repositorio\obj\Debug\SIGRE.Repositorio.csprojResolveAssemblyReference.cache
+C:\Users\DEY\source\repos\SistemaGRE\SIGRE.Repositorio\obj\Debug\SIGRE.Repositorio.csproj.CoreCompileInputs.cache

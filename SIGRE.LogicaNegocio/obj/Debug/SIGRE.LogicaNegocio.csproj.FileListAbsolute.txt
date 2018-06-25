@@ -1,0 +1,6 @@
+C:\Users\DEY\source\repos\SistemaGRE\SIGRE.LogicaNegocio\bin\Debug\SIGRE.LogicaNegocio.dll
+C:\Users\DEY\source\repos\SistemaGRE\SIGRE.LogicaNegocio\bin\Debug\SIGRE.LogicaNegocio.pdb
+C:\Users\DEY\source\repos\SistemaGRE\SIGRE.LogicaNegocio\obj\Debug\SIGRE.LogicaNegocio.csprojResolveAssemblyReference.cache
+C:\Users\DEY\source\repos\SistemaGRE\SIGRE.LogicaNegocio\obj\Debug\SIGRE.LogicaNegocio.csproj.CoreCompileInputs.cache
+C:\Users\DEY\source\repos\SistemaGRE\SIGRE.LogicaNegocio\obj\Debug\SIGRE.LogicaNegocio.dll
+C:\Users\DEY\source\repos\SistemaGRE\SIGRE.LogicaNegocio\obj\Debug\SIGRE.LogicaNegocio.pdb

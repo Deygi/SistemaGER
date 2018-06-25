@@ -3,3 +3,13 @@ C:\Users\DEY\source\repos\SistemaGRE\SIGRE.Entities\bin\Debug\SIGRE.Entities.pdb
 C:\Users\DEY\source\repos\SistemaGRE\SIGRE.Entities\obj\Debug\SIGRE.Entities.csproj.CoreCompileInputs.cache
 C:\Users\DEY\source\repos\SistemaGRE\SIGRE.Entities\obj\Debug\SIGRE.Entities.dll
 C:\Users\DEY\source\repos\SistemaGRE\SIGRE.Entities\obj\Debug\SIGRE.Entities.pdb
+C:\Users\DEY\source\repos\SistemaGRE\SIGRE.Entities\obj\Debug\SIGRE.Entities.csprojResolveAssemblyReference.cache
+C:\Users\DEY\source\repos\SistemaGRE\SIGRE.Entities\bin\Debug\SIGRE.Entities.dll.config
+C:\Users\DEY\source\repos\SistemaGRE\SIGRE.Entities\bin\Debug\EntityFramework.dll
+C:\Users\DEY\source\repos\SistemaGRE\SIGRE.Entities\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\DEY\source\repos\SistemaGRE\SIGRE.Entities\bin\Debug\SIGRE.Modelo.dll
+C:\Users\DEY\source\repos\SistemaGRE\SIGRE.Entities\bin\Debug\SIGRE.Modelo.pdb
+C:\Users\DEY\source\repos\SistemaGRE\SIGRE.Entities\bin\Debug\SIGRE.Modelo.dll.config
+C:\Users\DEY\source\repos\SistemaGRE\SIGRE.Entities\bin\Debug\EntityFramework.xml
+C:\Users\DEY\source\repos\SistemaGRE\SIGRE.Entities\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\DEY\source\repos\SistemaGRE\SIGRE.Entities\obj\Debug\SIGRE.Entities.csproj.CopyComplete

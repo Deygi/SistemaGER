@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SIGRE.Modelo</RootNamespace>
     <AssemblyName>SIGRE.Modelo</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -49,51 +50,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Market.cs">
-      <DependentUpon>SIGRE.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Product.cs">
-      <DependentUpon>SIGRE.tt</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Report.cs">
-      <DependentUpon>SIGRE.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Sample.cs">
-      <DependentUpon>SIGRE.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SIGRE.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SIGRE.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SIGRE.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SIGRE.tt</DependentUpon>
-    </Compile>
     <Compile Include="SIGRE.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>SIGRE.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="sysdiagrams.cs">
-      <DependentUpon>SIGRE.tt</DependentUpon>
-    </Compile>
-    <Compile Include="typeProduct.cs">
-      <DependentUpon>SIGRE.tt</DependentUpon>
-    </Compile>
-    <Compile Include="typeUnit.cs">
-      <DependentUpon>SIGRE.tt</DependentUpon>
-    </Compile>
-    <Compile Include="typeUser.cs">
-      <DependentUpon>SIGRE.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Ubigeo.cs">
-      <DependentUpon>SIGRE.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Usuario.cs">
-      <DependentUpon>SIGRE.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -103,24 +64,9 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>SIGRE.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="SIGRE.edmx.diagram">
-      <DependentUpon>SIGRE.edmx</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="SIGRE.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>SIGRE.edmx</DependentUpon>
-      <LastGenOutput>SIGRE.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="SIGRE.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>SIGRE.edmx</DependentUpon>
-      <LastGenOutput>SIGRE.cs</LastGenOutput>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

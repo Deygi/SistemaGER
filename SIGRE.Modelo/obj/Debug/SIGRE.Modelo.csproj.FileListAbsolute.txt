@@ -6,7 +6,5 @@ C:\Users\DEY\source\repos\SistemaGRE\SIGRE.Modelo\bin\Debug\EntityFramework.SqlS
 C:\Users\DEY\source\repos\SistemaGRE\SIGRE.Modelo\bin\Debug\EntityFramework.xml
 C:\Users\DEY\source\repos\SistemaGRE\SIGRE.Modelo\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\DEY\source\repos\SistemaGRE\SIGRE.Modelo\obj\Debug\SIGRE.Modelo.csprojResolveAssemblyReference.cache
-C:\Users\DEY\source\repos\SistemaGRE\SIGRE.Modelo\obj\Debug\SIGRE.Modelo.csproj.CoreCompileInputs.cache
-C:\Users\DEY\source\repos\SistemaGRE\SIGRE.Modelo\obj\Debug\SIGRE.Modelo.csproj.CopyComplete
 C:\Users\DEY\source\repos\SistemaGRE\SIGRE.Modelo\obj\Debug\SIGRE.Modelo.dll
 C:\Users\DEY\source\repos\SistemaGRE\SIGRE.Modelo\obj\Debug\SIGRE.Modelo.pdb

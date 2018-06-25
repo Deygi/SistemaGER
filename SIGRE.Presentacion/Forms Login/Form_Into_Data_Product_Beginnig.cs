@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SIGRE.Presentacion.Forms_Into_Data
+namespace SIGRE.Presentacion.Forms_Login
 {
     public partial class Form_Into_Data_Product_Beginnig : Form
     {

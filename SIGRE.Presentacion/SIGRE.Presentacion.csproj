@@ -8,9 +8,10 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>SIGRE.Presentacion</RootNamespace>
     <AssemblyName>SIGRE.Presentacion</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -51,12 +52,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form_Login.cs">
       <SubType>Form</SubType>
       <CustomToolNamespace>SIGRE.Presentacion</CustomToolNamespace>
@@ -64,22 +59,22 @@
     <Compile Include="Form_Login.Designer.cs">
       <DependentUpon>Form_Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms Into Data\Form_Into_Data_Product_Beginnig.cs">
+    <Compile Include="Forms Login\Form_Into_Data_Product_Beginnig.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms Into Data\Form_Into_Data_Product_Beginnig.Designer.cs">
+    <Compile Include="Forms Login\Form_Into_Data_Product_Beginnig.Designer.cs">
       <DependentUpon>Form_Into_Data_Product_Beginnig.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms Into Data\Form_Into_Sample_Producto.cs">
+    <Compile Include="Forms Login\Form_Into_Sample_Producto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms Into Data\Form_Into_Sample_Producto.Designer.cs">
+    <Compile Include="Forms Login\Form_Into_Sample_Producto.Designer.cs">
       <DependentUpon>Form_Into_Sample_Producto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms Into Data\Form_List_Product_Into.cs">
+    <Compile Include="Forms Login\Form_List_Product_Into.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms Into Data\Form_List_Product_Into.Designer.cs">
+    <Compile Include="Forms Login\Form_List_Product_Into.Designer.cs">
       <DependentUpon>Form_List_Product_Into.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms Reports\Form_Report_Beginning.cs">
@@ -102,13 +97,13 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms Into Data\Form_Into_Data_Product_Beginnig.resx">
+    <EmbeddedResource Include="Forms Login\Form_Into_Data_Product_Beginnig.resx">
       <DependentUpon>Form_Into_Data_Product_Beginnig.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms Into Data\Form_Into_Sample_Producto.resx">
+    <EmbeddedResource Include="Forms Login\Form_Into_Sample_Producto.resx">
       <DependentUpon>Form_Into_Sample_Producto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms Into Data\Form_List_Product_Into.resx">
+    <EmbeddedResource Include="Forms Login\Form_List_Product_Into.resx">
       <DependentUpon>Form_List_Product_Into.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Login.resx">
