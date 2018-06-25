@@ -57,10 +57,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms Login\Form_Login.cs">
+    <Compile Include="Form_Login.cs">
       <SubType>Form</SubType>
+      <CustomToolNamespace>SIGRE.Presentacion</CustomToolNamespace>
     </Compile>
-    <Compile Include="Forms Login\Form_Login.Designer.cs">
+    <Compile Include="Form_Login.Designer.cs">
       <DependentUpon>Form_Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms Into Data\Form_Into_Data_Product_Beginnig.cs">
@@ -104,8 +105,23 @@
     <EmbeddedResource Include="Forms Into Data\Form_Into_Data_Product_Beginnig.resx">
       <DependentUpon>Form_Into_Data_Product_Beginnig.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms Login\Form_Login.resx">
+    <EmbeddedResource Include="Forms Into Data\Form_Into_Sample_Producto.resx">
+      <DependentUpon>Form_Into_Sample_Producto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms Into Data\Form_List_Product_Into.resx">
+      <DependentUpon>Form_List_Product_Into.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Login.resx">
       <DependentUpon>Form_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms Reports\Form_Report_Beginning.resx">
+      <DependentUpon>Form_Report_Beginning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms Reports\Form_Report_Month.resx">
+      <DependentUpon>Form_Report_Month.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms Reports\Form_Report_Year.resx">
+      <DependentUpon>Form_Report_Year.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -135,6 +151,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\girl %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bars-chart %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diagram.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diagram %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>6fe8a1e4-2489-484c-822f-e3bc289a17db</ProjectGuid>
+    <ProjectGuid>{6FE8A1E4-2489-484C-822F-E3BC289A17DB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SIGRE.Repositorio</RootNamespace>
@@ -30,24 +30,36 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System"/>
-    
-    <Reference Include="System.Core"/>
-    <Reference Include="System.Xml.Linq"/>
-    <Reference Include="System.Data.DataSetExtensions"/>
-    
-    
-    <Reference Include="Microsoft.CSharp"/>
-    
-    <Reference Include="System.Data"/>
-    
-    <Reference Include="System.Net.Http"/>
-    
-    <Reference Include="System.Xml"/>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Access_Data_Market.cs" />
+    <Compile Include="Access_Data_Product.cs" />
+    <Compile Include="Access_Data_Report.cs" />
+    <Compile Include="Access_Data_Sample.cs" />
+    <Compile Include="Access_Data_typeProducto.cs" />
+    <Compile Include="Access_Data_typeUnit.cs" />
+    <Compile Include="Access_Data_typeUser.cs" />
+    <Compile Include="Access_Data_Ubigeo.cs" />
+    <Compile Include="Access_Data_User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SIGRE.Entities\SIGRE.Entities.csproj">
+      <Project>{ea15dd02-2122-4491-8218-cf61778c2a7f}</Project>
+      <Name>SIGRE.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SIGRE.Modelo\SIGRE.Modelo.csproj">
+      <Project>{1183fa94-d225-4470-bc45-f67bac055b55}</Project>
+      <Name>SIGRE.Modelo</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
- </Project>
+</Project>

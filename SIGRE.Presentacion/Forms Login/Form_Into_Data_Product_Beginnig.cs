@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SIGRE.Presentacion
+namespace SIGRE.Presentacion.Forms_Into_Data
 {
-    public partial class Form1 : Form
+    public partial class Form_Into_Data_Product_Beginnig : Form
     {
-        public Form1()
+        public Form_Into_Data_Product_Beginnig()
         {
             InitializeComponent();
         }

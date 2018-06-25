@@ -7,3 +7,12 @@ C:\Users\DEY\source\repos\SistemaGRE\SIGRE.Presentacion\obj\Debug\SIGRE.Presenta
 C:\Users\DEY\source\repos\SistemaGRE\SIGRE.Presentacion\obj\Debug\SIGRE.Presentacion.csproj.CoreCompileInputs.cache
 C:\Users\DEY\source\repos\SistemaGRE\SIGRE.Presentacion\obj\Debug\SIGRE.Presentacion.exe
 C:\Users\DEY\source\repos\SistemaGRE\SIGRE.Presentacion\obj\Debug\SIGRE.Presentacion.pdb
+C:\Users\DEY\source\repos\SistemaGRE\SIGRE.Presentacion\obj\Debug\SIGRE.Presentacion.Forms_Login.Form_Into_Data_Product_Beginnig.resources
+C:\Users\DEY\source\repos\SistemaGRE\SIGRE.Presentacion\obj\Debug\SIGRE.Presentacion.Forms_Login.Form_Into_Sample_Producto.resources
+C:\Users\DEY\source\repos\SistemaGRE\SIGRE.Presentacion\obj\Debug\SIGRE.Presentacion.Forms_Login.Form_List_Product_Into.resources
+C:\Users\DEY\source\repos\SistemaGRE\SIGRE.Presentacion\obj\Debug\SIGRE.Presentacion.Forms_Into_Data.Form_Login.resources
+C:\Users\DEY\source\repos\SistemaGRE\SIGRE.Presentacion\obj\Debug\SIGRE.Presentacion.Forms_Reports.Form_Report_Beginning.resources
+C:\Users\DEY\source\repos\SistemaGRE\SIGRE.Presentacion\obj\Debug\SIGRE.Presentacion.Forms_Reports.Form_Report_Month.resources
+C:\Users\DEY\source\repos\SistemaGRE\SIGRE.Presentacion\obj\Debug\SIGRE.Presentacion.Forms_Reports.Form_Report_Year.resources
+C:\Users\DEY\source\repos\SistemaGRE\SIGRE.Presentacion\obj\Debug\SIGRE.Presentacion.csproj.CopyComplete
+C:\Users\DEY\source\repos\SistemaGRE\SIGRE.Presentacion\obj\Debug\SIGRE.Presentacion.Forms_Into_Data.Form_Into_Data_Product_Beginnig.resources
