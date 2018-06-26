@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SIGRE.Entities;
-using SIGRE.Modelo;
 
 
 namespace SIGRE.Repositorio

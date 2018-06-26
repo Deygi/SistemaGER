@@ -1,2 +1,13 @@
 C:\Users\DEY\source\repos\SistemaGRE\SIGRE.Repositorio\obj\Debug\SIGRE.Repositorio.csprojResolveAssemblyReference.cache
 C:\Users\DEY\source\repos\SistemaGRE\SIGRE.Repositorio\obj\Debug\SIGRE.Repositorio.csproj.CoreCompileInputs.cache
+C:\Users\DEY\source\repos\SistemaGRE\SIGRE.Repositorio\bin\Debug\SIGRE.Repositorio.dll
+C:\Users\DEY\source\repos\SistemaGRE\SIGRE.Repositorio\bin\Debug\SIGRE.Repositorio.pdb
+C:\Users\DEY\source\repos\SistemaGRE\SIGRE.Repositorio\bin\Debug\SIGRE.Entities.dll
+C:\Users\DEY\source\repos\SistemaGRE\SIGRE.Repositorio\bin\Debug\SIGRE.Modelo.dll
+C:\Users\DEY\source\repos\SistemaGRE\SIGRE.Repositorio\bin\Debug\SIGRE.Entities.pdb
+C:\Users\DEY\source\repos\SistemaGRE\SIGRE.Repositorio\bin\Debug\SIGRE.Entities.dll.config
+C:\Users\DEY\source\repos\SistemaGRE\SIGRE.Repositorio\bin\Debug\SIGRE.Modelo.pdb
+C:\Users\DEY\source\repos\SistemaGRE\SIGRE.Repositorio\bin\Debug\SIGRE.Modelo.dll.config
+C:\Users\DEY\source\repos\SistemaGRE\SIGRE.Repositorio\obj\Debug\SIGRE.Repositorio.csproj.CopyComplete
+C:\Users\DEY\source\repos\SistemaGRE\SIGRE.Repositorio\obj\Debug\SIGRE.Repositorio.dll
+C:\Users\DEY\source\repos\SistemaGRE\SIGRE.Repositorio\obj\Debug\SIGRE.Repositorio.pdb

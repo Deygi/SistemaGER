@@ -41,7 +41,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="business _Logic_User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SIGRE.Entities\SIGRE.Entities.csproj">
+      <Project>{ea15dd02-2122-4491-8218-cf61778c2a7f}</Project>
+      <Name>SIGRE.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SIGRE.Repositorio\SIGRE.Repositorio.csproj">
+      <Project>{6fe8a1e4-2489-484c-822f-e3bc289a17db}</Project>
+      <Name>SIGRE.Repositorio</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
